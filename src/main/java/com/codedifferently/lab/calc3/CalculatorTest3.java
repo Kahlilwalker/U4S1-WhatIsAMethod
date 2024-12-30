@@ -1,9 +1,23 @@
 package com.codedifferently.lab.calc3;
 
 public class CalculatorTest3 {
-    public static void main(String[] args) {
+    public static double tax = .05;
+    public  static double tip = .15;
 
-        Calculator3 calc = new Calculator3();
+    public static double findTotal(double price){
+        double total = price*(1+tax+tip);
+        System.out.println("$" +total);
+
+
+        return total;
+    }
+    public static void main(String[] args) {
+        System.out.println(findTotal(10));
+    }
+
+}
+
+
 
         //Use the Calculator object and arguments supplied to findTotal()
         //to print the total for each person
@@ -19,6 +33,4 @@ public class CalculatorTest3 {
        Person 6: $15 (Alex)
        Person 7: $11
        Person 8: $30
-       */
-    }
-}
+ */
